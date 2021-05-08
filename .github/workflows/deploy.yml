@@ -32,12 +32,14 @@ jobs:
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SERVER_PORT: ${{ secrets.SERVER_PORT }}
         run: |
           mkdir -p ~/.ssh/
           echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
+          ssh-keyscan -p $SERVER_PORT $SERVER_HOST >> ~/.ssh/known_hosts
           git config --global user.email "bot@hotdry.top"
           git config --global user.name "Deploy Bot"
           
