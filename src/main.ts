@@ -7,4 +7,13 @@ import router from "./router";
 import store from "./store";
 import "@/m/matomo";
 
-createApp(App).use(store).use(router).use(VueAxios, Axios).mount("#app");
+import { Layout, Menu, Radio } from "ant-design-vue";
+
+createApp(App)
+  .use(store)
+  .use(router)
+  .use(VueAxios, Axios)
+  .use(Layout)
+  .use(Menu)
+  .use(Radio)
+  .mount("#app");
