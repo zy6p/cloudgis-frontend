@@ -51,11 +51,7 @@ jobs:
           SERVER_DEPLOY_DIR: ${{ secrets.SERVER_DEPLOY_DIR }}
         run: |
           yarn build
-          ssh $SERVER_USER@$SERVER_HOST -p $SERVER_PORT
-          if [ -d "$SERVER_DEPLOY_DIR/cloudgis" ]; then
-            rm -r $SERVER_DEPLOY_DIR/cloudgis
-          fi
-          exit
+          ssh -p $SERVER_SSH_PORT $SERVER_USER@$SERVER_HOST "trash-empty;trash-put $SERVER_DEPLOY_DIR/cloudgis"
           scp -r -P $SERVER_PORT ./dist $SERVER_USER@$SERVER_HOST:$SERVER_DEPLOY_DIR/cloudgis
 
       # Runs a set of commands using the runners shell
