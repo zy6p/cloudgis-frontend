@@ -1,6 +1,6 @@
 yarn build
 ssh $SERVER_USER@$SERVER_HOST -p $SREVER_PORT
-if [ -d "/myfolder" ]; then
+if [ -d "$SERVER_DEPLOY_DIR/cloudgis" ]; then
   rm -r $SERVER_DEPLOY_DIR/cloudgis
 fi
 exit
