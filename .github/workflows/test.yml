@@ -28,14 +28,6 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
           
-      - name: run install
-        run: |
-          yarn install
-
-      - name: run build
-        run: |
-          yarn build
-
       - name: run lint
         run: |
           yarn run lint
