@@ -3,15 +3,15 @@
 </template>
 
 <script lang="ts">
-// import Cesium from "cesium";
-import { defineComponent } from "vue";
+import Cesium from "cesium";
+import { defineComponent, ref } from "vue";
 export default defineComponent({
   components: {},
   data() {
     return {};
   },
   mounted() {
-    // let widget = new Cesium.Viewer("cesiumContainer");
+    let widget = new Cesium.Viewer("cesiumContainer");
   },
 });
 </script>
