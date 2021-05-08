@@ -65,4 +65,4 @@ jobs:
           git init
           git add -A
           git commit -a -m "deploy"
-          git push -f git@github.com:zy6p/cloudgit-frontend.git master:gh-pages
+          git push -f git@github.com:zy6p/cloudgis-frontend.git master:gh-pages
