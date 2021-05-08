@@ -4,4 +4,4 @@ if [ -d "$SERVER_DEPLOY_DIR/cloudgis" ]; then
   rm -r $SERVER_DEPLOY_DIR/cloudgis
 fi
 exit
-scp ./dist $SERVER_USER@$SERVER_HOST:$SERVER_DEPLOY_DIR/cloudgis -P $SREVER_PORT
+scp -r -P $SREVER_PORT ./dist $SERVER_USER@$SERVER_HOST:$SERVER_DEPLOY_DIR/cloudgis
