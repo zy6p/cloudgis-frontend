@@ -1,5 +1,7 @@
 # cloudgis-frontend
 
+[![Deploy](https://github.com/zy6p/cloudgis-frontend/actions/workflows/deploy.yml/badge.svg)](https://github.com/zy6p/cloudgis-frontend/actions/workflows/deploy.yml) [![Test](https://github.com/zy6p/cloudgis-frontend/actions/workflows/test.yml/badge.svg)](https://github.com/zy6p/cloudgis-frontend/actions/workflows/test.yml)
+
 Cloud GIS platform frontend. 
 It supports OGC standards such as WFS WMS WPS. 
 And it supports multi users doing the same project.  
