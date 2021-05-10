@@ -1,19 +1,15 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import Axios from "axios";
-import VueAxios from "vue-axios";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-import "@/m/matomo";
 
-import { Layout, Menu, Radio } from "ant-design-vue";
+import "./plugins/matomo";
+import installAxios from "./plugins/axios";
+import installAntd from "./plugins/antd";
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .use(VueAxios, Axios)
-  .use(Layout)
-  .use(Menu)
-  .use(Radio)
-  .mount("#app");
+const app = createApp(App);
+installAntd(app);
+installAxios(app);
+
+app.use(store).use(router).mount("#app");

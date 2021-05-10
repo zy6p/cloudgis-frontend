@@ -3,7 +3,8 @@
 </template>
 
 <script lang="ts">
-// import Cesium from "cesium";
+import Cesium from "cesium";
+import "cesium/Build/Cesium/Widgets/widgets.css";
 import { defineComponent } from "vue";
 export default defineComponent({
   components: {},
@@ -11,7 +12,9 @@ export default defineComponent({
     return {};
   },
   mounted() {
-    // let widget = new Cesium.Viewer("cesiumContainer");
+    let widget = new Cesium.Viewer("cesiumContainer");
   },
 });
 </script>
+
+<style></style>
