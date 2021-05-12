@@ -12,7 +12,9 @@ export default defineComponent({
     return {};
   },
   mounted() {
-    let widget = new Cesium.Viewer("cesiumContainer");
+    this.viewer = new Cesium.Viewer("cesiumContainer");
+    this.viewer.scene.debugShowFramesPerSecond = true;
+    this.viewer.scene.globe.depthTestAgainstTerrain = true;
   },
 });
 </script>
