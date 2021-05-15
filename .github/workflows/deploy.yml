@@ -2,7 +2,7 @@
 
 name: deploy
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
@@ -27,7 +27,7 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
-          
+
       - name: init git
         env:
           ACTION_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
@@ -42,7 +42,7 @@ jobs:
           ssh-keyscan -p $SERVER_PORT $SERVER_HOST >> ~/.ssh/known_hosts
           git config --global user.email "bot@hotdry.top"
           git config --global user.name "Deploy Bot"
-          
+
       - name: deploy to own server
         env:
           SERVER_HOST: ${{ secrets.SERVER_HOST }}
@@ -58,6 +58,7 @@ jobs:
       - name: build and deploy to github
         run: |
           cd dist
+          echo "cloudgis.chao6p.top" > CNAME
           git init
           git add -A
           git commit -a -m "deploy"
