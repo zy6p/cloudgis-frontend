@@ -1,17 +1,24 @@
 <template>
-  <div id="cesiumContainer" style="height: 100%"></div>
+  <div id="cesiumContainer" style="height: 900px"></div>
 </template>
 
 <script lang="ts">
-// import Cesium from "cesium";
+import * as Cesium from "cesium";
+import "cesium/Build/Cesium/Widgets/widgets.css";
 import { defineComponent } from "vue";
+
 export default defineComponent({
   components: {},
   data() {
     return {};
   },
   mounted() {
-    // let widget = new Cesium.Viewer("cesiumContainer");
+    (window as any).CESIUM_BASE_URL = "./js/Cesium";
+    const viewer = new Cesium.Viewer("cesiumContainer");
+    viewer.scene.debugShowFramesPerSecond = true;
+    viewer.scene.globe.depthTestAgainstTerrain = true;
   },
 });
 </script>
+
+<style></style>
