@@ -13,7 +13,7 @@ export default defineComponent({
     return {};
   },
   mounted() {
-    (window as any).CESIUM_BASE_URL = "./js/Cesium";
+    (window as any).CESIUM_BASE_URL = "./js/cesium";
     const viewer = new Cesium.Viewer("cesiumContainer");
     viewer.scene.debugShowFramesPerSecond = true;
     viewer.scene.globe.depthTestAgainstTerrain = true;

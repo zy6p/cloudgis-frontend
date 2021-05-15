@@ -4,12 +4,9 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
-import "./plugins/matomo";
-import installAxios from "./plugins/axios";
-import installAntd from "./plugins/antd";
+import loadAllPlugins from "./plugins";
 
 const app = createApp(App);
-installAntd(app);
-installAxios(app);
+loadAllPlugins(app);
 
 app.use(store).use(router).mount("#app");
