@@ -15,4 +15,3 @@ This roadmap focus on new features and bugs.
 - [ ] Setup a helloworld wps alg.
 - [ ] Develop more wps algs.
 - [ ] Dynamic load wps algs and show in a window.
-
