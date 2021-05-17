@@ -1,5 +1,5 @@
 <template>
-  <div id="cesiumContainer" style="height: 900px"></div>
+  <div id="cesiumContainer" style="height: 1000px"></div>
 </template>
 
 <script lang="ts">

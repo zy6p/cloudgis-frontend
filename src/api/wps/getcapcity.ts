@@ -1,0 +1,7 @@
+//getcapcityrequest
+
+//getparams
+
+//excute
+
+//getresult
